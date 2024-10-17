@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion"
 import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaGlobe } from "react-icons/fa6";
 import { SiJavascript } from "react-icons/si";
 import { RiFirebaseFill } from "react-icons/ri";
@@ -14,7 +15,7 @@ export const Projects = () => {
                     <img src="vibesky.png" alt="" className='rounded-lg' />
                 </div>
                 <div className='2xl:w-[36%] xl:w-[45%] w-full text-base flex flex-col gap-y-5 xl:justify-between text-justify font-fontBody leading-relaxed'>
-                    <h3 className='text-xl'>VibeSky</h3>
+                    <h3 className='text-xl font-semibold'>VibeSky</h3>
                     <p>&emsp;&emsp;A responsive single-page weather app built with React.js, utilizing the OpenWeatherMap API and other web technologies. This app allows users to search for current weather conditions, view 5-day and next 24 hours forecasts, and check air quality in cities worldwide.</p>
                     <div className='tech flex gap-y-2 flex-wrap justify-evenly'>
                         <div>
@@ -39,14 +40,14 @@ export const Projects = () => {
                         </div>
                     </div>
                     <div className='btns flex justify-around xl:justify-between'>
-                        <button>
+                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                             <FaGithub />
                             <p>GitHub</p>
-                        </button>
-                        <button>
+                        </motion.button>
+                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                             <FaGlobe />
                             <p>Live</p>
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
             </div>
@@ -58,7 +59,7 @@ export const Projects = () => {
                     <img src="greenplate.png" alt="" className='rounded-lg' />
                 </div>
                 <div className='2xl:w-[36%] xl:w-[45%] w-full text-base flex flex-col gap-y-5 xl:justify-between text-justify font-fontBody leading-relaxed'>
-                    <h3 className='text-xl'>GreenPlate</h3>
+                    <h3 className='text-xl font-semibold'>GreenPlate</h3>
                     <p>&emsp;&emsp;A simple and responsive multi-page food restaurant application built using React.js and modern web technologies. This app is designed as a frontend-only solution, allowing users to explore various food options, add them to their cart, and proceed to checkout.</p>
                     <div className='tech flex gap-y-2 flex-wrap justify-evenly'>
                         <div>
@@ -83,14 +84,14 @@ export const Projects = () => {
                         </div>
                     </div>
                     <div className='btns flex justify-around xl:justify-between'>
-                        <button>
+                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                             <FaGithub />
                             <p>GitHub</p>
-                        </button>
-                        <button>
+                        </motion.button>
+                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                             <FaGlobe />
                             <p>Live</p>
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
             </div>

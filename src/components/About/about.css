@@ -1,6 +1,6 @@
 .skills div{
     @apply w-44 h-44;
-    @apply w-[50%] md:w-[30%] xl:w-[15%];
+    @apply w-[50%] md:w-[30%] xl:w-[20%];
     @apply flex flex-col justify-center gap-y-3 items-center;
     @apply rounded-full;
 }

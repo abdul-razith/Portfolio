@@ -7,7 +7,7 @@ import './projects.css'
 export const Projects = () => {
     return (
         <div className='px-8 md:px-24 pb-20 lg:pb-32 tracking-wider bg-colorBg text-colorText'>
-            <h2 className='font-fontHead text-3xl mb-10'>Projects</h2>
+            <h2 className='font-fontHead text-4xl mb-10 text-center'>Projects</h2>
 
             <div className='row border-2 border-colorText rounded-2xl p-10 flex flex-col gap-y-3 xl:flex-row lg:gap-y-5 justify-between items-center mb-8'>
                 <div className='2xl:w-[60%] xl:w-[50%] w-full hidden sm:block'>

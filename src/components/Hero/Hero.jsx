@@ -4,7 +4,7 @@ import { FiGithub, FiFileText  } from "react-icons/fi";
 
 export const Hero = () => {
     return (
-        <main className='px-8 py-20 md:px-24 h-fit lg:h-screen flex flex-col items-center font-fontBody bg-colorBg text-colorText'>
+        <main className='px-8 py-20 lg:py-32 md:px-24 h-fit flex flex-col items-center font-fontBody bg-colorBg text-colorText'>
             <div className='flex flex-col'>
                 <div className='text-xl sm:text-3xl font-medium tracking-widest flex flex-col gap-y-5'>
                     <p>Hey there!, I'm-</p>

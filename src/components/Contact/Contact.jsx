@@ -11,14 +11,18 @@ export const Contact = () => {
                 <h2 className='font-fontHead text-4xl'>Contact</h2>
                 <p>Feel free to connect with me</p>
                 <div className='btns flex gap-x-5'>
-                    <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                        <IoIosMail />
-                        <p>Mail</p>
-                    </motion.button>
-                    <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                        <FaLinkedin />
-                        <p>LinkedIn</p>
-                    </motion.button>
+                    <a href="mailto:razith01@gmail.com" target='_blank'>
+                        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                            <IoIosMail />
+                            <p>E-mail</p>
+                        </motion.button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdul-razith" target='_blank'>
+                        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                            <FaLinkedin />
+                            <p>LinedIn</p>
+                        </motion.button>
+                    </a>
                 </div>
             </div>
         </div>

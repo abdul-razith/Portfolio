@@ -4,11 +4,17 @@
 @tailwind utilities;
 
 .theme-dark{
-    --colorText: #FFFFFF;
-    --colorBg: #000000;
+    --colorText: #DBD8E3;
+    --colorBg: #2A2438;
+    /* --colorText: #FFFFFF;
+    --colorBg: #000000; */
 }
 
 .theme-light{
     --colorText: #000000;
     --colorBg: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

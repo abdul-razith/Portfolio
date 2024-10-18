@@ -40,14 +40,18 @@ export const Projects = () => {
                         </div>
                     </div>
                     <div className='btns flex justify-around xl:justify-between'>
-                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                            <FaGithub />
-                            <p>GitHub</p>
-                        </motion.button>
-                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                            <FaGlobe />
-                            <p>Live</p>
-                        </motion.button>
+                        <motion.a href="https://github.com/abdul-razith/VibeSky" target='blank' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                            <button>
+                                <FaGithub />
+                                <p>GitHub</p>
+                            </button>
+                        </motion.a>
+                        <motion.a href="https://vibe-sky.web.app" target='blank' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                            <button>
+                                <FaGlobe />
+                                <p>Live</p>
+                            </button>
+                        </motion.a>
                     </div>
                 </div>
             </div>
@@ -84,14 +88,18 @@ export const Projects = () => {
                         </div>
                     </div>
                     <div className='btns flex justify-around xl:justify-between'>
-                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                            <FaGithub />
-                            <p>GitHub</p>
-                        </motion.button>
-                        <motion.button whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                            <FaGlobe />
-                            <p>Live</p>
-                        </motion.button>
+                        <motion.a href="https://github.com/abdul-razith/GreenPlate" target='_blank' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                            <button>
+                                <FaGithub />
+                                <p>GitHub</p>
+                            </button>
+                        </motion.a>
+                        <motion.a href="https://green--plate.web.app" target='_blank' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                            <button>
+                                <FaGlobe />
+                                <p>Live</p>
+                            </button>
+                        </motion.a>
                     </div>
                 </div>
             </div>

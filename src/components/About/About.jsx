@@ -1,10 +1,16 @@
 import React from 'react'
-import { motion } from "framer-motion"
+import { easeIn, easeInOut, motion } from "framer-motion"
 import './about.css'
 import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaPython, FaAws } from "react-icons/fa6";
 import { SiJavascript, SiTailwindcss, SiDjango, SiMysql, SiRedux } from "react-icons/si";
 
 export const About = () => {
+
+    const cardAnimationProps = {
+        whileHover : {scale: 1.1},
+        transition : {duration: 0.2, ease: 'linear'}
+    }
+
     return (
         <div className='bg-colorBg text-colorText px-8 md:px-24 pb-20 lg:pb-32 tracking-wider'>
             <h2 className='font-fontHead text-4xl mb-10 text-center'>About Me</h2>
@@ -29,50 +35,50 @@ export const About = () => {
             <div className='font-fontBody text-xl mt-20'>
                 <h2 className='font-fontHead text-4xl mb-10 text-center'>Skills</h2>
                 <div className='skills w-full flex flex-wrap justify-evenly gap-y-2'>
-                    <motion.div whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                    <motion.div {...cardAnimationProps}>
                         <FaHtml5 />
                         <p>HTML</p>
                     </motion.div>
-                    <div>
+                    <motion.div {...cardAnimationProps}>
                         <FaCss3Alt />
                         <p>CSS</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <FaReact />
                         <p>React JS</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <FaGithub />
                         <p>GitHub</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <FaPython />
                         <p>Python</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <FaAws />
                         <p>AWS</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <SiJavascript />
                         <p>JavaScript</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <SiTailwindcss />
                         <p>Tailwind</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <SiDjango />
                         <p>Django</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <SiMysql />
                         <p>MySQL</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div {...cardAnimationProps}>
                         <SiRedux />
                         <p>Redux</p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

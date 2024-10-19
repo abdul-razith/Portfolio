@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX  } from "react-icons/fi";
 import { toggle, menuToggle } from '../../slice/navbarSlice';
 
 export const Navbar = () => {
 
     const { theme, toggleMenu } = useSelector(state => state.navbar);
     const dispatch = useDispatch();
+    
+    // Prevent scroll is the mobile nav is opened
+    useEffect(() => {
+        if (toggleMenu) {
+            // Disable scrolling
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Enable scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cleanup on component unmount or when toggleMenu changes
+        return () => {
+            document.body.style.overflow = 'auto'; // Restore scroll when component is unmounted
+        };
+    }, [toggleMenu]);
 
     // Set the theme class to the body tag.
     function setTheme() {
@@ -19,25 +35,28 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className='w-full h-20 px-8 md:px-24 font-fontHead flex justify-between items-center bg-colorBg text-colorText duration-600 ease-linear'>
+            <nav className='fixed w-full h-20 px-8 md:px-24 font-fontHead tracking-wider flex justify-between items-center bg-colorBg text-colorText duration-600 ease-linear'>
 
-                <div className="w-fit font-fontHead font-extrabold text-4xl">
-                    <a href="#"><h1>AR</h1></a>
+                <div className="w-fit font-fontHead font-extrabold text-3xl">
+                    <a href=""><h1>AR</h1></a>
                 </div>
 
-                <div className='hidden md:block text-lg'>
+                <div className='hidden md:block text-base'>
                     <ul className='flex justify-between gap-x-8'>
                         <li className='hover:underline'>
-                            <a href="#">Home</a>
+                            <a href="#home">Home</a>
                         </li>
                         <li className='hover:underline'>
-                            <a href="#">About</a>
+                            <a href="#about">About</a>
                         </li>
                         <li className='hover:underline'>
-                            <a href="#">Projects</a>
+                            <a href="#skills">Skills</a>
                         </li>
                         <li className='hover:underline'>
-                            <a href="#">Contact</a>
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li className='hover:underline'>
+                            <a href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -46,18 +65,21 @@ export const Navbar = () => {
                 {
                     toggleMenu &&
                     <div className='mobile-nav text-lg'>
-                        <ul className='w-full py-6 absolute top-20 left-0 flex flex-col items-center gap-y-7 bg-gray-600'>
+                        <ul className='w-full py-6 absolute top-0 left-0 flex flex-col items-center gap-y-7 bg-gray-600'>
                             <li className='hover:underline'>
-                                <a href="#">Home</a>
+                                <a href="#home" onClick={() => dispatch(menuToggle())}>Home</a>
                             </li>
                             <li className='hover:underline'>
-                                <a href="#">About</a>
+                                <a href="#about" onClick={() => dispatch(menuToggle())}>About</a>
                             </li>
                             <li className='hover:underline'>
-                                <a href="#">Projects</a>
+                                <a href="#skills" onClick={() => dispatch(menuToggle())}>Skills</a>
                             </li>
                             <li className='hover:underline'>
-                                <a href="#">Contact</a>
+                                <a href="#projects" onClick={() => dispatch(menuToggle())}>Projects</a>
+                            </li>
+                            <li className='hover:underline'>
+                                <a href="#contact" onClick={() => dispatch(menuToggle())}>Contact</a>
                             </li>
                             <li>
                                 <div className="w-fit">
@@ -96,7 +118,6 @@ export const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-
                 }
 
                 <div className="w-fit hidden md:block">
@@ -133,9 +154,10 @@ export const Navbar = () => {
                     </label>
                 </div>
 
-                <button className='md:hidden block' onClick={() => dispatch(menuToggle())}>
-                    <FiMenu size={26}>
-                    </FiMenu >
+                <button className={`md:hidden cursor-pointer ${toggleMenu ? 'rotate-90' : ''} transition-transform duration-300`} onClick={() => dispatch(menuToggle())}>
+                    {
+                        toggleMenu ? <FiX size={26} /> : <FiMenu size={26} />
+                    }
                 </button>
             </nav>
             <hr />

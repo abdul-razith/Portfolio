@@ -9,10 +9,11 @@ export default {
       colors: {
         colorText: "var(--colorText)",
         colorBg: "var(--colorBg)",
+        colorBgs: "var(--colorBgs)"
       },
     },
     fontFamily: {
-      fontHead: ["Playfair Display", "serif"],
+      fontHead: ["DM Mono", "monospace"],
       fontBody: ["Montserrat", "sans-serif"],
     },
     container: {

@@ -3,7 +3,7 @@
 }
 
 .row .tech div{
-    @apply bg-red-400 w-[45%] sm:w-36 md:py-0.5 text-center rounded-full;
+    @apply bg-colorTechBg w-[45%] sm:w-36 md:py-0.5 text-center rounded-full;
     @apply flex justify-center items-center gap-x-2;
 }
 
@@ -14,6 +14,6 @@
 }
 
 .row .btns button{
-    @apply bg-green-500 w-[110px] sm:w-32 py-0.5 rounded-full;
+    @apply bg-colorLinkBg hover:bg-colorLinkHover w-[110px] sm:w-32 py-0.5 rounded-full;
     @apply flex justify-center items-center gap-x-2;
 }

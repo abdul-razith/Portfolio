@@ -13,7 +13,7 @@ export const Skills = () => {
     return (
         <div id='skills' className='bg-colorBg text-colorText font-fontBody text-lg px-8 md:px-24 py-16 lg:py-20 tracking-wider'>
             <h2 className='font-fontHead text-3xl mb-10 text-center'>Skills</h2>
-            <div className='skills w-full flex flex-wrap justify-evenly gap-y-2'>
+            <div className='skills font-medium w-full flex flex-wrap justify-evenly gap-y-2'>
                 <motion.div {...cardAnimationProps}>
                     <FaHtml5 />
                     <p>HTML</p>
@@ -23,8 +23,20 @@ export const Skills = () => {
                     <p>CSS</p>
                 </motion.div>
                 <motion.div {...cardAnimationProps}>
+                    <SiJavascript />
+                    <p>JavaScript</p>
+                </motion.div>
+                <motion.div {...cardAnimationProps}>
+                    <SiTailwindcss />
+                    <p>Tailwind</p>
+                </motion.div>
+                <motion.div {...cardAnimationProps}>
                     <FaReact />
                     <p>React JS</p>
+                </motion.div>
+                <motion.div {...cardAnimationProps}>
+                    <SiRedux />
+                    <p>Redux</p>
                 </motion.div>
                 <motion.div {...cardAnimationProps}>
                     <FaGithub />
@@ -39,24 +51,12 @@ export const Skills = () => {
                     <p>AWS</p>
                 </motion.div>
                 <motion.div {...cardAnimationProps}>
-                    <SiJavascript />
-                    <p>JavaScript</p>
-                </motion.div>
-                <motion.div {...cardAnimationProps}>
-                    <SiTailwindcss />
-                    <p>Tailwind</p>
-                </motion.div>
-                <motion.div {...cardAnimationProps}>
                     <SiDjango />
                     <p>Django</p>
                 </motion.div>
                 <motion.div {...cardAnimationProps}>
                     <SiMysql />
                     <p>MySQL</p>
-                </motion.div>
-                <motion.div {...cardAnimationProps}>
-                    <SiRedux />
-                    <p>Redux</p>
                 </motion.div>
             </div>
         </div>

@@ -9,7 +9,12 @@ export default {
       colors: {
         colorText: "var(--colorText)",
         colorBg: "var(--colorBg)",
-        colorBgs: "var(--colorBgs)"
+        colorBgs: "var(--colorBgs)",
+        colorTechBg: "var(--colorTechBg)",
+        colorLinkBg: "var(--colorLinkBg)",
+        colorLinkHover: "var(--colorLinkHover)",
+        colorSocialBg: "var(--colorSocialBg)",
+        colorSocialHover: "var(--colorSocialHover)",
       },
     },
     fontFamily: {

@@ -10,7 +10,7 @@ export const Contact = () => {
             <div className='flex flex-col items-center gap-y-5'>
                 <h2 className='font-fontHead text-3xl'>Contact</h2>
                 <p>Feel free to connect with me</p>
-                <div className='btns flex gap-x-5'>
+                <div className='btns flex gap-x-5 duration-500'>
                     <a href="mailto:razith01@gmail.com" target='_blank'>
                         <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                             <IoIosMail />
@@ -20,7 +20,7 @@ export const Contact = () => {
                     <a href="https://www.linkedin.com/in/abdul-razith" target='_blank'>
                         <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                             <FaLinkedin />
-                            <p>LinedIn</p>
+                            <p>LinkedIn</p>
                         </motion.button>
                     </a>
                 </div>

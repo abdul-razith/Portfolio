@@ -8,15 +8,28 @@
     --colorText: #ffffff;
     --colorBg: rgb(14, 19, 32);
     --colorBgs: rgb(17, 25, 39);
+    --colorTechBg: #1E293B;
+    --colorLinkBg: #FF6B6B;
+    --colorLinkHover: #D04A4A;
+    --colorSocialBg: #1D976C;
+    --colorSocialHover: #137A51;
 }
 
 .theme-light{
     --colorText: #000000;
     --colorBg: #F8F9FA;
     --colorBgs: #FFF;
+    --colorTechBg: #E2E8F0;
+    --colorLinkBg: #0091ff;
+    --colorLinkHover: #0073d0;
+    --colorSocialBg: #FFB03B;
+    --colorSocialHover: #D78C2A;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}

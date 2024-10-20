@@ -19,7 +19,7 @@ export const Contact = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className='flex flex-col items-center gap-y-5'>
                 <h2 className='font-fontHead text-3xl'>Contact</h2>
-                <p>Feel free to connect with me</p>
+                <p>Always happy to connect!</p>
                 <div className='btns flex gap-x-5 duration-500'>
                     <a href="mailto:razith01@gmail.com" target='_blank'>
                         <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>

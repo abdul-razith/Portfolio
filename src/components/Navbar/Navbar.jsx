@@ -41,7 +41,7 @@ export const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}  // Animate to visible and its normal position
                 transition={{ duration: 0.8, ease: "easeInOut" }} // Timing for smooth transition
 
-                className='fixed w-full h-20 px-8 md:px-24 font-fontHead tracking-wider flex justify-between items-center bg-colorBg text-colorText duration-600 ease-linear z-50'>
+                className='fixed w-full h-20 px-8 md:px-24 font-fontHead tracking-wider flex justify-between items-center bg-colorBg text-colorText duration-600 ease-linear z-40'>
 
                 <div className="w-fit font-fontHead font-extrabold text-3xl">
                     <a href=""><h1>AR</h1></a>
@@ -78,7 +78,7 @@ export const Navbar = () => {
                         exit={{opacity : 0, y:-1000}}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         
-                        className='w-full py-6 absolute top-0 left-0 flex flex-col items-center gap-y-7 bg-colorBgs shadow-customShadow'>
+                        className='w-full py-6 absolute top-0 left-0 flex flex-col items-center gap-y-7 bg-colorNav shadow-customShadow'>
                             <li className='hover:underline'>
                                 <a href="#home" onClick={() => dispatch(menuToggle())}>Home</a>
                             </li>

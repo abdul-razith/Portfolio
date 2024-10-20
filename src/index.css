@@ -13,6 +13,7 @@
     --colorLinkHover: #D04A4A;
     --colorSocialBg: #1D976C;
     --colorSocialHover: #137A51;
+    --colorNav: rgb(40, 44, 54);
 }
 
 .theme-light{
@@ -24,6 +25,7 @@
     --colorLinkHover: #0073d0;
     --colorSocialBg: #FFB03B;
     --colorSocialHover: #D78C2A;
+    --colorNav: #e5e5e5;
 }
 
 ::-webkit-scrollbar {

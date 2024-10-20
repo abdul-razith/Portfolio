@@ -14,7 +14,7 @@ export const Hero = () => {
                 className='text-xl sm:text-2xl font-medium tracking-wider flex flex-col gap-y-5'>
                     <p>Hey there!, I'm-</p>
                     <h1 className='font-fontHead text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold'>Abdul Razith</h1>
-                    <p className=' leading-relaxed'><span className=''>Frontend Developer.</span><br /><span className='text-gray-400'>A self-taught coder with a passion for web development.</span></p>
+                    <p className=' leading-relaxed'><span className=''>Frontend Developer.</span><br /><span className='text-gray-400'>A dedicated self-learner with a passion for creating web applications.</span></p>
                 </motion.div>
 
                 <motion.div

@@ -15,6 +15,7 @@ export default {
         colorLinkHover: "var(--colorLinkHover)",
         colorSocialBg: "var(--colorSocialBg)",
         colorSocialHover: "var(--colorSocialHover)",
+        colorNav: "var(--colorNav)",
       },
 
       boxShadow: {

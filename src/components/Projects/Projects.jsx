@@ -6,11 +6,25 @@ import { RiFirebaseFill } from "react-icons/ri";
 import './projects.css'
 
 export const Projects = () => {
+
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 50, scale: 0.8 },
+        visible: { opacity: 1, y: 0, scale: 1 },
+    };
+
     return (
         <div id='projects' className='px-8 md:px-24 py-16 lg:py-20 tracking-wider bg-colorBgs text-colorText'>
             <h2 className='font-fontHead text-3xl mb-10 text-center'>Projects</h2>
 
-            <div className='row bg-colorBg border-2 border-colorText rounded-2xl p-10 flex flex-col gap-y-3 xl:flex-row lg:gap-y-5 justify-between items-center mb-8'>
+            <motion.div
+
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once:true, amount: 0.2 }}
+                transition={{ duration: 0.5}}
+
+                className='row bg-colorBg border-2 border-colorText rounded-2xl p-10 flex flex-col gap-y-3 xl:flex-row lg:gap-y-5 justify-between items-center mb-8'>
                 <div className='2xl:w-[60%] xl:w-[50%] w-full hidden sm:block'>
                     <img src="vibesky.png" alt="" className='rounded-lg' />
                 </div>
@@ -54,11 +68,17 @@ export const Projects = () => {
                         </motion.a>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* ----- */}
 
-            <div className='row bg-colorBg border-2 border-colorText rounded-2xl p-10 flex flex-col gap-y-3 xl:flex-row-reverse lg:gap-y-5 justify-between items-center mb-8'>
+            <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once:true, amount: 0.5 }}
+            transition={{ duration: 0.5}}
+            className='row bg-colorBg border-2 border-colorText rounded-2xl p-10 flex flex-col gap-y-3 xl:flex-row-reverse lg:gap-y-5 justify-between items-center mb-8'>
                 <div className='2xl:w-[60%] xl:w-[50%] w-full hidden sm:block'>
                     <img src="greenplate.png" alt="" className='rounded-lg' />
                 </div>
@@ -102,8 +122,8 @@ export const Projects = () => {
                         </motion.a>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-        </div>
+        </div >
     )
 }

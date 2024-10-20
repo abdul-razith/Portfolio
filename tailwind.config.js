@@ -16,6 +16,10 @@ export default {
         colorSocialBg: "var(--colorSocialBg)",
         colorSocialHover: "var(--colorSocialHover)",
       },
+
+      boxShadow: {
+        'customShadow': 'inset 0px 0px 5px 2px var(--colorBg)',
+      },
     },
     fontFamily: {
       fontHead: ["DM Mono", "monospace"],

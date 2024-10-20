@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
+import { motion } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux'
-import { FiMenu, FiX  } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { toggle, menuToggle } from '../../slice/navbarSlice';
 
 export const Navbar = () => {
 
     const { theme, toggleMenu } = useSelector(state => state.navbar);
     const dispatch = useDispatch();
-    
+
     // Prevent scroll is the mobile nav is opened
     useEffect(() => {
         if (toggleMenu) {
@@ -35,7 +36,12 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className='fixed w-full h-20 px-8 md:px-24 font-fontHead tracking-wider flex justify-between items-center bg-colorBg text-colorText duration-600 ease-linear'>
+            <motion.nav
+                initial={{ opacity: 0, y: 50 }} // Start invisible and below
+                animate={{ opacity: 1, y: 0 }}  // Animate to visible and its normal position
+                transition={{ duration: 0.8, ease: "easeInOut" }} // Timing for smooth transition
+
+                className='fixed w-full h-20 px-8 md:px-24 font-fontHead tracking-wider flex justify-between items-center bg-colorBg text-colorText duration-600 ease-linear z-50'>
 
                 <div className="w-fit font-fontHead font-extrabold text-3xl">
                     <a href=""><h1>AR</h1></a>
@@ -64,8 +70,15 @@ export const Navbar = () => {
                 {/* For mobile nav menu */}
                 {
                     toggleMenu &&
-                    <div className='mobile-nav text-lg'>
-                        <ul className='w-full py-6 absolute top-0 left-0 flex flex-col items-center gap-y-7 bg-gray-600'>
+                    <div
+                        className='mobile-nav text-lg'>
+                        <motion.ul
+                        initial={{ opacity: 0, y: -100 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{opacity : 0, y:-1000}}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        
+                        className='w-full py-6 absolute top-0 left-0 flex flex-col items-center gap-y-7 bg-colorBgs shadow-customShadow'>
                             <li className='hover:underline'>
                                 <a href="#home" onClick={() => dispatch(menuToggle())}>Home</a>
                             </li>
@@ -116,7 +129,7 @@ export const Navbar = () => {
                                     </label>
                                 </div>
                             </li>
-                        </ul>
+                        </motion.ul>
                     </div>
                 }
 
@@ -159,8 +172,7 @@ export const Navbar = () => {
                         toggleMenu ? <FiX size={26} /> : <FiMenu size={26} />
                     }
                 </button>
-            </nav>
-            <hr />
+            </motion.nav>
         </>
     )
 }

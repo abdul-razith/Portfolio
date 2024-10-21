@@ -23,23 +23,11 @@ export function ScrollIndicator() {
   return (
     <>
       <div>
-        {/* Scroll Indicator Bar */}
         <motion.div
           className="fixed top-0 left-0 h-1 bg-colorSocialBg z-50"
           style={{ width: `${scrollYProgress * 100}%` }}
           initial={{ width: 0 }}
           animate={{ width: `${scrollYProgress * 100}%` }}
-          transition={{ ease: "easeOut", duration: 0.1 }}
-        />
-      </div>
-
-      <div>
-        {/* Scroll Indicator Bar */}
-        <motion.div
-          className="fixed right-0 top-0 h-full w-2 rounded-full bg-colorSocialBg z-50"
-          style={{ height: `${scrollYProgress * 100}%` }}
-          initial={{ height: 0 }}
-          animate={{ height: `${scrollYProgress * 100}%` }}
           transition={{ ease: "easeOut", duration: 0.1 }}
         />
       </div>

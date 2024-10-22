@@ -29,7 +29,7 @@ export const About = () => {
                     <p>When I’m not coding, I enjoy roaming with friends 🤗, indulging in PC gaming 🎮, staying fit with home workouts 🏋️‍♂️, or watching podcasts on YouTube 📺. I'm an introvert with a unique perspective on life, always ready to explore new ideas and opportunities.</p>
                 </div>
                 <motion.div
-                    animate={{ scale: [1, 1.01, 1] }}  // Scale up and down
+                    animate={{ scale: [1, 1.01, 1] }}
                     transition={{
                         duration: 0.6,         // Duration of one cycle
                         ease: "easeInOut",     // Easing for smooth motion

@@ -46,15 +46,15 @@ export const Skills = () => {
                     <FaReact />
                     <p>React JS</p>
                 </motion.div>
-                <motion.div {...cardAnimationProps}>
+                {/* <motion.div {...cardAnimationProps}>
                     <SiRedux />
                     <p>Redux</p>
-                </motion.div>
+                </motion.div> */}
                 <motion.div {...cardAnimationProps}>
                     <FaGithub />
                     <p>GitHub</p>
                 </motion.div>
-                <motion.div {...cardAnimationProps}>
+                {/* <motion.div {...cardAnimationProps}>
                     <FaPython />
                     <p>Python</p>
                 </motion.div>
@@ -69,7 +69,7 @@ export const Skills = () => {
                 <motion.div {...cardAnimationProps}>
                     <SiMysql />
                     <p>MySQL</p>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </div>
     )

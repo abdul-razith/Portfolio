@@ -22,7 +22,7 @@ export const Hero = () => {
                 animate = {{opacity : 1, y : 0}}
                 transition={{duration : 0.8, ease : "linear"}}
                 className='mt-10 sm:mt-14 font-semibold flex flex-col sm:flex-row sm:gap-x-5 gap-y-5 justify-around sm:justify-start duration-500'>
-                    <motion.a whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }} href="https://drive.google.com/file/d/1a5vaTUXNns97etCQC5GYgThvjmtLbodC/view?usp=sharing" target="_blank"><button className='bg-colorSocialBg hover:bg-colorSocialHover w-44 py-4 px-10 sm:py-5 rounded-3xl flex items-center sm:justify-center gap-x-2'><FiFileText size={22}/><span>Resume</span></button></motion.a>
+                    <motion.a whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }} href="https://drive.google.com/file/d/17PGwK8LmONndZRCiAgvso0jR4gjQ-75Z/view?usp=sharing" target="_blank"><button className='bg-colorSocialBg hover:bg-colorSocialHover w-44 py-4 px-10 sm:py-5 rounded-3xl flex items-center sm:justify-center gap-x-2'><FiFileText size={22}/><span>Resume</span></button></motion.a>
                     <motion.a whileHover={{scale: 1.1 }} whileTap={{ scale: 0.8 }} href="https://github.com/abdul-razith" target="_blank"><button className='bg-colorSocialBg hover:bg-colorSocialHover w-44 py-4 px-10 sm:py-5 rounded-3xl flex items-center sm:justify-center gap-x-2'><FiGithub size={22}/><span>GitHub</span></button></motion.a>
                 </motion.div>
             </div>
